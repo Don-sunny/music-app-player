@@ -30,9 +30,6 @@ class MostlyExpandedWidget extends StatelessWidget {
                           height: 10,
                         ),
                         itemBuilder: (BuildContext context, int index) {
-                          // bool isContains = mostlyNotifier.value
-                          //     .where((element) => element.id == songs[index].id)
-                          //     .isNotEmpty;
                           return InkWell(
                             onTap: () {},
                             child: Card(
