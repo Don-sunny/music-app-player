@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:music_app_player/screens/settings_screen/privacy_polic/privacy_policy.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'about_us.dart';
 import 'app_bar_settings.dart';
 import 'row_widget_settings.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+  SettingsScreen({super.key});
+  String link = 'https://pub.dev/packages/share_plus/example';
+
+  shareText() {
+    Share.share(link);
+  }
 
   @override
   Widget build(BuildContext ctx) {
@@ -47,9 +53,14 @@ class SettingsScreen extends StatelessWidget {
                         icon: Icons.privacy_tip,
                       ),
                     ),
-                    const RowWidgetSettingsScreen(
-                      name: 'Share App',
-                      icon: Icons.share,
+                    InkWell(
+                      onTap: () {
+                        shareText();
+                      },
+                      child: const RowWidgetSettingsScreen(
+                        name: 'Share App',
+                        icon: Icons.share,
+                      ),
                     ),
                   ],
                 ),

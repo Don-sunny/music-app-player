@@ -13,8 +13,8 @@ class AppBarWidget extends StatelessWidget {
       children: [
         IconButton(
             onPressed: () {
-              Navigator.push(ctx,
-                  MaterialPageRoute(builder: (ctx) => const SettingsScreen()));
+              Navigator.push(
+                  ctx, MaterialPageRoute(builder: (ctx) => SettingsScreen()));
             },
             icon: const Icon(
               Icons.menu,
